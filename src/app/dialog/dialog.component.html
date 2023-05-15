@@ -1,6 +1,6 @@
-<h1 mat-dialog-title>Add Product Form</h1>
+<h1 mat-dialog-title>Consultar Vuelos</h1>
 <div mat-dialog-content>
-    <form  [formGroup] = "vueloForm">
+    <form [formGroup]="vueloForm">
         <mat-form-field appearance="outline">
             <mat-label>Desde</mat-label>
             <input formControlName="origen" matInput placeholder="Desde">
@@ -18,20 +18,20 @@
         </mat-form-field>
         <mat-form-field appearance="outline">
             <mat-label>Fecha de Salida</mat-label>
-            <input formControlName="fechaSalida"  matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
-          <mat-form-field appearance="outline">
+            <input formControlName="fechaSalida" matInput [matDatepicker]="salidaPicker">
+            <mat-datepicker-toggle matSuffix [for]="salidaPicker"></mat-datepicker-toggle>
+            <mat-datepicker #salidaPicker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
             <mat-label>Fecha de Vuelta</mat-label>
-            <input formControlName="fechavuelta"  matInput [matDatepicker]="picker">
-            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-            <mat-datepicker #picker></mat-datepicker>
-          </mat-form-field>
+            <input formControlName="fechavuelta" matInput [matDatepicker]="vueltaPicker">
+            <mat-datepicker-toggle matSuffix [for]="vueltaPicker"></mat-datepicker-toggle>
+            <mat-datepicker #vueltaPicker></mat-datepicker>
+        </mat-form-field>
     </form>
 </div>
 <div mat-dialog-actions [align]="'end'">
     <button mat-raised-button color="" mat-dialog-close>close</button>
     <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addProduct()">{{acctionBtn}}</button>
-</div>
 
+</div>
